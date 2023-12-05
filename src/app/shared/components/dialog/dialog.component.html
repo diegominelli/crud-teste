@@ -1,0 +1,16 @@
+<div class="dialog">
+  <ng-container *ngIf="data.action === 'deletar'">
+    <mat-icon class="icon-deletar">report</mat-icon>
+    <h1 mat-dialog-title>{{data.mensagem}}</h1>
+  </ng-container>
+
+  <ng-container *ngIf="data.action === 'sucesso'">
+    <mat-icon class="icon">check_circle_outline</mat-icon>
+    <h1 mat-dialog-title>{{data.mensagem}}</h1>
+  </ng-container>
+
+  <div mat-dialog-actions>
+    <button class="button" mat-raised-button mat-dialog-close (click)="confirmClick()">Confirmar</button>
+    <button class="button" mat-raised-button mat-dialog-close (click)="cancelClick()">Cancelar</button>
+  </div>
+</div>
