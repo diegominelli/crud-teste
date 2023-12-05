@@ -1,0 +1,101 @@
+<div class="container">
+  <h1>Novo Cliente</h1>
+    <form [formGroup]="addForm" class="form">
+      <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>nome</mat-label>
+          <input matInput formControlName="nome">
+          <mat-error *ngIf="addForm.get('nome')?.hasError">
+            Nome <strong>required</strong>
+          </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>sobrenome</mat-label>
+          <input formControlName="sobrenome" matInput>
+          <mat-error *ngIf="addForm.get('sobrenome')?.hasError">
+            Sobrenome <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>cpf</mat-label>
+          <input formControlName="cpf"  mask="000.000.000-00"  matInput>
+          <mat-error *ngIf="addForm.get('cpf')?.errors?.['cpfInvalido']">
+            Please enter a valid cpf
+          </mat-error>
+          <mat-error *ngIf="addForm.get('cpf')?.errors?.['required']">
+            CPF <strong>required</strong>
+          </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>data nascimento</mat-label>
+          <input formControlName="dataNascimento" mask="00/00/0000" matInput>
+          <mat-error *ngIf="addForm.get('dataNascimento')?.hasError">
+            Data Nascimento <strong>required</strong>
+          </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>renda</mat-label>
+          <input formControlName="renda" formControlName="renda" mask="separator.2" thousandSeparator="." matInput>
+          <mat-error *ngIf="addForm.get('renda')?.hasError">
+            Renda <strong>required</strong>
+          </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>email</mat-label>
+          <input formControlName="email" placeholder="Ex. pat@example.com" mask="A*@A*.SSS" [validation]="true" [dropSpecialCharacters]="false" matInput>
+          <mat-error *ngIf="addForm.get('email')?.errors?.['email']">
+            Please enter a valid email address
+          </mat-error>
+          <mat-error *ngIf="addForm.get('email')?.errors?.['required']">
+            Email is <strong>required</strong>
+          </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>data cadastro</mat-label>
+          <input formControlName="dataCadastro" mask="00/00/0000" matInput>
+          <mat-error *ngIf="addForm.get('dataCadastro')?.hasError">
+            Data Cadastro <strong>required</strong>
+          </mat-error>
+      </mat-form-field>
+      
+      <div class="action">
+        <button
+          mat-raised-button
+          class="button"
+          (click)="adicionar()"
+        >
+          Adicionar
+        </button>
+        <button
+          mat-raised-button
+          class="button"
+          (click)="voltar()"
+        >
+          Voltar
+        </button>
+
+        <mat-spinner
+          *ngIf="loading"
+          diameter="24"
+        ></mat-spinner>
+      </div>
+    </form>
+</div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
