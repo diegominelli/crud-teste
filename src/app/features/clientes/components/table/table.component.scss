@@ -1,0 +1,61 @@
+.body {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 20px;
+}
+
+.container-button {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 40px;
+}
+
+.button {
+  margin-left: 16px;
+  background-color: #0A4A5B;
+  border-radius: 20px;
+  color: #fff;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 50px;
+  margin: auto;
+}
+
+th {
+  background-color: #11728B;
+  color: #fff;
+  text-transform: uppercase;
+
+}
+
+ng-container {
+  background-color:#11728B;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  height: 40px;
+  background: #f1f3f4;
+  border-radius: 5px;
+}
+
+.icon-search {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 15px;
+}
+
+.mat-form-field-prefix {
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+
