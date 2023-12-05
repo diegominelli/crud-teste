@@ -30,7 +30,7 @@
 
       <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>data nascimento</mat-label>
-          <input formControlName="dataNascimento" mask="00/00/0000" matInput>
+          <input type="date" formControlName="dataNascimento" matInput>
           <mat-error *ngIf="addForm.get('dataNascimento')?.hasError">
             Data Nascimento <strong>required</strong>
           </mat-error>
@@ -57,7 +57,7 @@
 
       <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>data cadastro</mat-label>
-          <input formControlName="dataCadastro" mask="00/00/0000" matInput>
+          <input type="date" formControlName="dataCadastro" matInput>
           <mat-error *ngIf="addForm.get('dataCadastro')?.hasError">
             Data Cadastro <strong>required</strong>
           </mat-error>

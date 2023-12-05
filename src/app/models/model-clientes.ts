@@ -8,3 +8,7 @@ export interface Cliente {
   email: string;
   dataCadastro: string
 }
+
+export interface ClienteResponse{
+  clientes: Array<Cliente>;
+}

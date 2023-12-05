@@ -6,6 +6,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { catchError, finalize, throwError } from 'rxjs';
 import { ClientesService } from 'src/app/services/service-clientes.service';
 import { DialogComponent } from 'src/app/shared/components/dialog/dialog.component';
+import { Cliente } from 'src/app/models/model-clientes';
 
 @Component({
   selector: 'app-table',
@@ -16,7 +17,7 @@ export class TableComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  dataSource: MatTableDataSource<any> = new MatTableDataSource();
+  dataSource: MatTableDataSource<Cliente> = new MatTableDataSource();
   displayedColumns: string[] = ['nome', 'sobrenome', 'cpf', 'dataNascimento', 'renda', 'dataCadastro', 'editar', 'deletar'];
 
   durationInSeconds = 3;
