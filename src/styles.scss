@@ -3,3 +3,24 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: "Montserrat", sans-serif; }
+
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+  background-color: white;
+}
+
+.mat-sort-header-arrow {
+  color: #fff;
+}
+
+.mat-form-field-prefix,
+.mat-form-field-suffix {
+  margin-top: 40px !important;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-infix {
+  padding: 13px 0;
+}
+
+.mat-form-field-underline {
+  width: 0px;
+}

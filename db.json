@@ -1,3 +1,24 @@
 {
-  "clientes": []
+  "clientes": [
+    {
+      "nome": "Claudio",
+      "sobrenome": "Dantas",
+      "cpf": "82411905068",
+      "dataNascimento": "17091997",
+      "renda": 10480,
+      "email": "claudio@teste.com",
+      "dataCadastro": "13122022",
+      "id": 23
+    },
+    {
+      "nome": "Alexandre",
+      "sobrenome": "Marques",
+      "cpf": "70697715094",
+      "dataNascimento": "25082000",
+      "renda": 15800,
+      "email": "alexandre@teste.com",
+      "dataCadastro": "20032023",
+      "id": 24
+    }
+  ]
 }
